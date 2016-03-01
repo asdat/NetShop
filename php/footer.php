@@ -114,6 +114,7 @@
     <!-- Scripts -->
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/navigator.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/skel-viewport.min.js"></script>

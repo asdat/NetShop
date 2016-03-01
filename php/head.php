@@ -1,7 +1,5 @@
 ﻿<?php
-
-$printHead = "<meta name=\"viewport\" content=\"user-scalable=yes,width=device-width,initial-scale=1\">\n
-	<meta name=\"viewport\" content=\"initial-scale=1\">\n <title>";
+$printHead = "<meta name=\"viewport\" content=\"initial-scale=1\">\n <title>";
 
 $titleArr = [
         'womanClothes'=>['title' => 'Женская одежда', 'content'=>'Женская одежда'],
@@ -30,7 +28,8 @@ $titleArr = [
 
     $printMeta = "<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n";
     $printLink = "<link rel=\"stylesheet\" href=\"assets/css/main.css\"/>\n <link rel=\"stylesheet\" href=\"assets/css/style.css\" />\n";
-    $printLink .= "<link rel\"stylesheet\" href=\"assets/css/bootstrap.css\" type=\"text/css\"/>\n</head>";
+    $printLink .= "<link rel\"stylesheet\" href=\"assets/css/bootstrap.css\" type=\"text/css\"/>\n 
+            <script src=\"assets/js/navigator.js\"></script>";
     echo $printHead;
     echo $printMeta, $printLink;
     $clr = "<div class=\"clr\"></div>";

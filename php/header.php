@@ -1,8 +1,7 @@
 <?php
- $wrapperHeader = '<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">'; 
+ $wrapperHeader = '<div id="page-wrapper"><div id="header-wrapper" class="wrapper">'; 
  $wrapperHeader .= "<div id=\"header\">";
  echo $wrapperHeader;
- 
  // создаём массив для вывода заголовка
 $namePages = [
        'womanClothes'=>['title' => 'Женская одежда', 'content'=>'Женская одежда'],
@@ -72,7 +71,7 @@ $namePages = [
     global $classes;
     $html = "<ul class=\"{$classes[$level]}\">";  // для списка меню задаём класс с названием уровня
     foreach ($menu AS $i=>$item){   // перебираем элементы массива (ключ => значение)
-        $html.="<li class='item-$i'><a href='{$item['link']}'>{$item['title']}</a>\n";
+        $html.="<li class='item-$i'><a href='{$item['link']}' class='navigation-menu'>{$item['title']}</a>\n";
         if(count($item['children'])){ // если во втором уровне меню есть значение $item
             $html .= printMenu($item['children'], $level+1); // то заносим это значение в переменную 
         }
@@ -86,6 +85,5 @@ $namePages = [
     
     echo "</nav>\n</div>\n</div>";
    
-  
 ?>
               
