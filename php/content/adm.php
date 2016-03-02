@@ -1,5 +1,8 @@
 <?php
 
+ $_POST['login'];
+ $_POST['password'];
+
 $adm = [
     'user1' => ['login'=>'Stas', 'password'=>'123456'],
     'user2' => ['login'=>'Denis', 'password'=>'abcdefg']
@@ -14,7 +17,9 @@ function myAdmin(){
             echo '<h3>Не верно введены логин либо пароль. Пожалуйста повторите ввод</h3>';
         }
     }
+    
 }
+
 
 ?>
 

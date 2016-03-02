@@ -1,27 +1,45 @@
-<!DOCTYPE HTML>
-<!--
-	ZIGGS
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-    <head>
-        <?php
-            include_once ('php/head.php');
-        ?>
-    </head>
-    <body>
-        <?php
-            include_once ('php/header.php');
-        ?>
-        <?php
-            include_once ('php/leftSidebar.php');
-        ?>
-        <?php
-            include_once ('php/content/enter.php');
-        ?>
-        <?php
-            include_once ('php/footer.php');
-        ?>
-    </body>
-</html>
+<?php
+   $menu=[
+        ['title'=>'Главная', 'link'=>'/'],
+        ['title'=>'Женская одежда', 'link'=>'womanClothes.php', 
+            'children'=>[
+                ['title'=>'Кроссовки', 'link'=>'womanSneakers.php'],
+                ['title'=>'Свитшоты', 'link'=>'womanBlouse.php'],
+                ['title'=>'Штаны', 'link'=>'womanPants.php'],
+            ]
+            ],
+        ['title'=>'Мужская одежда', 'link'=>'manClothes.php', 
+            'children'=>[
+                ['title'=>'Кроссовки', 'link'=>'manSneakers.php'],
+                ['title'=>'Свитшоты', 'link'=>'manBlouse.php'],
+                ['title'=>'Штаны', 'link'=>'manPants.php'],
+            ]
+            ],
+        ['title'=>'Детская одежда', 'link'=>'kidsClothes.php', 
+            'children'=>[
+                ['title'=>'Кроссовки', 'link'=>'kidsSneakers.php'],
+                ['title'=>'Свитшоты', 'link'=>'kidsBlouse.php'],
+                ['title'=>'Штаны', 'link'=>'kidsPants.php'],
+            ]
+            ],
+       ['title'=>'Полезная информация', 'link'=>'usefulInfo.php'],
+        ['title'=>'Контакты', 'link'=>'contacts.php'],
+        ['title'=>'Войти', 'link'=>'Enter.php']
+    ];
+    function printMenu($menu, $level){
+    global $classes;
+    $html = "<ul class=\"{$classes[$level]}\">\n";
+    foreach ($menu AS $i=>$item){
+        $html.="<li class='item-$i'><a href='{$item['link']}'>{$item['title']}</a>\n";
+        if(count($item['children'])){
+            $html .= printMenu($item['children'], $level+1); 
+        }
+        $html.="</li>";
+    }
+    $html.='</ul>';
+    return $html;
+        
+    }
+    echo printMenu($menu, $level);
+?>
+              
