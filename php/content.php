@@ -1,5 +1,5 @@
 <?php
-
+/*
 include ('php/content/contats.php');
 include ('php/content/enter.php');
 include ('php/content/kidsBlouse.php');
@@ -15,5 +15,6 @@ include ('php/content/womanBlouse.php');
 include ('php/content/womanClothes.php');
 include ('php/content/womanPants.php');
 include ('php/content/womanSneakers.php');
-
+*/
+include_once ('content/enter.php');
 ?>

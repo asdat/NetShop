@@ -1,5 +1,5 @@
 <?php
- $wrapperHeader = '<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">'; 
+ $wrapperHeader = "<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">"; 
  $wrapperHeader .= "<div id=\"header\">";
  echo $wrapperHeader;
  
