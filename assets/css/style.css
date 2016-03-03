@@ -1,0 +1,139 @@
+#sidebar{
+    width: 230px;
+}
+.leftMenu{
+    width: 230px;
+    border-radius: 10px;
+    border: 2px solid #BCBCBC;
+    float: left;
+}
+.leftMenu li{
+    line-height: 4.5;
+    padding: 0 15px 0 15px;
+    text-align: left;
+}
+.leftMenu a{
+    text-decoration: none;
+}
+.leftMenu a:hover{
+    text-decoration: underline;
+    color: #F7857F;
+}
+.enterForm{
+    width: 850px;
+}
+.row{
+    height: auto;
+}
+
+.product {
+    width: 400px;
+    height: 500px;
+}
+
+.product:nth-child(odd){
+    float: left;
+}
+.product:nth-child(even){
+    margin-left: 450px;
+}
+.picture0{
+    background-image: url(../../images/menSneakers/menSneakers_1.jpg);
+}
+
+.picture1{
+    background-image: url(../../images/menSneakers/menSneakers_2.jpg);
+}
+.picture2{
+    background-image: url(../../images/menSneakers/menSneakers_3.jpg);
+}
+.picture3{
+    background-image: url(../../images/menSneakers/menSneakers_4.jpg);
+}
+.picture4{
+    background-image: url(../../images/menSneakers/menSneakers_5.jpg);
+}
+.picture5{
+    background-image: url(../../images/menSneakers/menSneakers_6.jpg);
+}
+
+div[class*='picture'] {
+    width: 400px;
+    height: 245px;
+    border: 11px solid #fff;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+div[class*='picture'] p {
+    margin-top: 250px;
+    color: #000;
+    text-align: center;
+}
+
+div[class*='picture'] a {
+    background-color: #DE716B;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 26px 51px;
+    margin-left: 95px;
+    color: #fff;
+}
+div[class*='picture'] a:hover{
+   background-color: #E78A84;
+}
+
+.info{
+    width: 951px;
+    height: auto;
+    text-align: left;
+    padding: 0;
+    color:
+}
+.info h3{
+    font-size: 20px;
+    color: #000;
+}
+
+.info span{
+    color: #000;
+}
+
+.content{
+    margin: 0 auto;
+    width: 862px;
+}
+.enterForm{
+    width: 420px;
+    height: auto;
+    float: left;
+}
+.checkInForm{
+    width: 420px;
+    height: auto;
+    margin-left: 440px;
+}
+
+.enterForm input, .checkInForm input{
+    width: 420px;
+    height: 21px;
+    z-index: 5;
+}
+.enterForm p, .checkInForm p{
+    text-align: center;
+}
+.enterForm a, .checkInForm a{
+    background-color: red;
+    text-decoration: none;
+    border-radius: 7px;
+}
+.enterForm a:hover{
+    text-decoration: underline;
+}
+.enterForm form input{
+    border-color: #FFCD40;
+}
+.enterForm button{
+    margin-top: 15px;
+}
