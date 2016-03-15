@@ -1,4 +1,8 @@
+<?php 
+        include_once ('DB/db.php');
+        ?>
 <?php
+
  $wrapperHeader = "<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">"; 
  $wrapperHeader .= "<div id=\"header\">";
  echo $wrapperHeader;
@@ -9,10 +13,10 @@ $namePages = [
        'womanSneakers'=>['title'=>'Женские кроссовки', 'content'=>'Женские кроссовки'],
        'womanBlouse'=>['title'=>'Женские свитшоты', 'content'=>'Женские свитшоты'],
        'womanPants'=>['title'=>'Женские штаны', 'content'=>'Женские свитшоты'],
-       'manClothes'=>['title' => 'Мужская одежда', 'content'=>'Мужская одежда'],
-       'manSneakers'=>['title' => 'Мужские кроссовки', 'content'=>'Мужские кроссовки'],
-       'manBlouse'=>['title'=>'Мужские свитшоты', 'content'=>'Мужские свитшоты'],
-       'manPants'=>['title'=>'Мужские штаны', 'content'=>'Мужские штаны'],
+       'menClothes'=>['title' => 'Мужская одежда', 'content'=>'Мужская одежда'],
+       'menSneakers'=>['title' => 'Мужские кроссовки', 'content'=>'Мужские кроссовки'],
+       'menBlouse'=>['title'=>'Мужские свитшоты', 'content'=>'Мужские свитшоты'],
+       'menPants'=>['title'=>'Мужские штаны', 'content'=>'Мужские штаны'],
        'kidsClothes'=>['title'=>'Детская одежда', 'content'=>'Детская одежда'],
        'kidsSneakers'=>['title' => 'Детские кроссовки', 'content'=>'Детские кроссовки'],
        'kidsBlouse'=>['title'=>'Детские свитшоты', 'content'=>'Детские свитшоты'],
@@ -35,9 +39,9 @@ $namePages = [
        echo $htmlNamePage; 
    }
    echo "<nav id=\"nav\">"; //закрываем все открытые теги
-   
+  
    // создаем массив для списка меню (название страницы, ссылки на них)
-       $menu=[
+      $menu=[
         ['title'=>'Главная', 'link'=>'/'],
         ['title'=>'Женская одежда', 'link'=>'womanClothes.php?page=womanClothes', 
             'children'=>[
@@ -46,11 +50,11 @@ $namePages = [
                 ['title'=>'Штаны', 'link'=>'womanPants.php?page=womanPants'],
             ]
             ],
-        ['title'=>'Мужская одежда', 'link'=>'manClothes.php?page=manClothes',  
+        ['title'=>'Мужская одежда', 'link'=>'manClothes.php?page=menClothes',  
             'children'=>[
-                ['title'=>'Кроссовки', 'link'=>'manSneakers.php?page=manSneakers'],
-                ['title'=>'Свитшоты', 'link'=>'manBlouse.php?page=manBlouse'],
-                ['title'=>'Штаны', 'link'=>'manPants.php?page=manPants'],
+                ['title'=>'Кроссовки', 'link'=>'manSneakers.php?page=menSneakers'],
+                ['title'=>'Свитшоты', 'link'=>'manBlouse.php?page=menBlouse'],
+                ['title'=>'Штаны', 'link'=>'manPants.php?page=menPants'],
             ]
             ],
         ['title'=>'Детская одежда', 'link'=>'kidsClothes.php?page=kidsClothes',
@@ -86,6 +90,5 @@ $namePages = [
     
     echo "</nav>\n</div>\n</div>";
    
-  
+    
 ?>
-              
