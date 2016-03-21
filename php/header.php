@@ -1,4 +1,8 @@
+<?php 
+        include_once ('DB/db.php');
+        ?>
 <?php
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         /*ini_set('display_errors',1);
@@ -6,6 +10,9 @@
         include ('../DB/db.php');*/
 
 >>>>>>> refs/remotes/origin/dev
+=======
+
+>>>>>>> refs/remotes/origin/MySql-dev
  $wrapperHeader = "<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">"; 
  $wrapperHeader .= "<div id=\"header\">";
  echo $wrapperHeader;
@@ -53,11 +60,19 @@ $namePages = [
                 ['title'=>'Штаны', 'link'=>'?page=womanPants'],
             ]
             ],
+<<<<<<< HEAD
         ['title'=>'Мужская одежда', 'link'=>'?page=menClothes',  
             'children'=>[
                 ['title'=>'Кроссовки', 'link'=>'?page=menSneakers'],
                 ['title'=>'Свитшоты', 'link'=>'?page=menBlouse'],
                 ['title'=>'Штаны', 'link'=>'?page=menPants'],
+=======
+        ['title'=>'Мужская одежда', 'link'=>'manClothes.php?page=menClothes',  
+            'children'=>[
+                ['title'=>'Кроссовки', 'link'=>'manSneakers.php?page=menSneakers'],
+                ['title'=>'Свитшоты', 'link'=>'manBlouse.php?page=menBlouse'],
+                ['title'=>'Штаны', 'link'=>'manPants.php?page=menPants'],
+>>>>>>> refs/remotes/origin/MySql-dev
             ]
             ],
         ['title'=>'Детская одежда', 'link'=>'?page=kidsClothes',
@@ -94,4 +109,9 @@ $namePages = [
     
     echo "</nav>\n</div>\n</div>";
    
+<<<<<<< HEAD
 ?>
+=======
+    
+?>
+>>>>>>> refs/remotes/origin/MySql-dev
