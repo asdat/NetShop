@@ -16,17 +16,24 @@ include ('php/content/womanClothes.php');
 include ('php/content/womanPants.php');
 include ('php/content/womanSneakers.php');
 */
-<<<<<<< HEAD
-include_once ('content/enter.php');
-=======
-
-
-$backgroundProduct = ['womanClothes', 'menClothes', 'kidsClothes'];
-        for($i = 0; $i < count($backgroundProduct);$i++ ){
-            if(in_array($_GET['page'], $backgroundProduct[$i])){
-                include ('php/content/'.$backgroundProduct[$i].'.php');
+$page = $_GET['page'];
+$backgroundProduct = [
+    'womanClothes' => ['womanBlouse', 'womanPants', 'womanSneakers'],
+    'menClothes' => ['menBlouse', 'menPants', 'menSneakers'],
+    'kidsClothes' => ['kidsBlouse', 'kidsPants', 'kidsSneakers'],
+    'usefullInfo', 'enter', 'contacts'
+    ];
+foreach ($backgroundProduct as $item) {
+    if($page == $item){
+        include_once ('php/content/'.$item.'.php');
+    } else {
+        for($i = 0; $i < count($item); $i++){
+            if(in_array($page == $item[$i])){
+                include_once ('php/content/'.$item[$i].'.php');
             }
         }
+    }
+}
 
 
 
