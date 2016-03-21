@@ -22,17 +22,17 @@ $defaultDiv = "<div id=\"highlights\" class=\"container\">\n
 									<div id=\"sidebar\">\n";
 
 $linksArr = [
-    ['title'=>'Женские кроссовки', 'link'=>'womanSneakers.php?page=womanSneakers'],
-    ['title'=>'Женские свитшоты', 'link'=>'womanBlouse.php?page=womanBlouse'],
-    ['title'=>'Женские Штаны', 'link'=>'womanPants.php?page=womanPants'],
-    ['title'=>'Мужске кроссовки', 'link'=>'manSneakers.php?page=manSneakers'],
-    ['title'=>'Мужские свитшоты', 'link'=>'manBlouse.php?page=manBlouse'],
-    ['title'=>'Мужские штаны', 'link'=>'manPants.php?page=manPants'],
-    ['title'=>'Детские кроссовки', 'link'=>'kidsSneakers.php?page=kidsSneakers'],
-    ['title'=>'Детские свитшоты', 'link'=>'kidsBlouse.php?page=kidsBlouse'],
-    ['title'=>'Детские штаны', 'link'=>'kidsPants.php?page=kidsPants'],
-    ['title'=>'Информация', 'link'=>'usefulInfo.php?page=usefulInfo'],
-    ['title'=>'Контакты', 'link'=>'contacts.php?page=contacts']
+    ['title'=>'Женские кроссовки', 'link'=>'?page=womanSneakers'],
+    ['title'=>'Женские свитшоты', 'link'=>'?page=womanBlouse'],
+    ['title'=>'Женские Штаны', 'link'=>'?page=womanPants'],
+    ['title'=>'Мужске кроссовки', 'link'=>'?page=menSneakers'],
+    ['title'=>'Мужские свитшоты', 'link'=>'?page=menBlouse'],
+    ['title'=>'Мужские штаны', 'link'=>'?page=menPants'],
+    ['title'=>'Детские кроссовки', 'link'=>'?page=kidsSneakers'],
+    ['title'=>'Детские свитшоты', 'link'=>'?page=kidsBlouse'],
+    ['title'=>'Детские штаны', 'link'=>'?page=kidsPants'],
+    ['title'=>'Информация', 'link'=>'?page=usefulInfo'],
+    ['title'=>'Контакты', 'link'=>'?page=contacts']
 ];
 
 function printLeftSidebar ($linksArr){

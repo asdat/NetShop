@@ -1,5 +1,9 @@
 <?php
- $wrapperHeader = '<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">'; 
+        /*ini_set('display_errors',1);
+        error_reporting(E_ALL);
+        include ('../DB/db.php');*/
+
+ $wrapperHeader = "<div id=\"page-wrapper\"><div id=\"header-wrapper\" class=\"wrapper\">"; 
  $wrapperHeader .= "<div id=\"header\">";
  echo $wrapperHeader;
  
@@ -9,10 +13,10 @@ $namePages = [
        'womanSneakers'=>['title'=>'Женские кроссовки', 'content'=>'Женские кроссовки'],
        'womanBlouse'=>['title'=>'Женские свитшоты', 'content'=>'Женские свитшоты'],
        'womanPants'=>['title'=>'Женские штаны', 'content'=>'Женские свитшоты'],
-       'manClothes'=>['title' => 'Мужская одежда', 'content'=>'Мужская одежда'],
-       'manSneakers'=>['title' => 'Мужские кроссовки', 'content'=>'Мужские кроссовки'],
-       'manBlouse'=>['title'=>'Мужские свитшоты', 'content'=>'Мужские свитшоты'],
-       'manPants'=>['title'=>'Мужские штаны', 'content'=>'Мужские штаны'],
+       'menClothes'=>['title' => 'Мужская одежда', 'content'=>'Мужская одежда'],
+       'menSneakers'=>['title' => 'Мужские кроссовки', 'content'=>'Мужские кроссовки'],
+       'menBlouse'=>['title'=>'Мужские свитшоты', 'content'=>'Мужские свитшоты'],
+       'menPants'=>['title'=>'Мужские штаны', 'content'=>'Мужские штаны'],
        'kidsClothes'=>['title'=>'Детская одежда', 'content'=>'Детская одежда'],
        'kidsSneakers'=>['title' => 'Детские кроссовки', 'content'=>'Детские кроссовки'],
        'kidsBlouse'=>['title'=>'Детские свитшоты', 'content'=>'Детские свитшоты'],
@@ -35,38 +39,39 @@ $namePages = [
        echo $htmlNamePage; 
    }
    echo "<nav id=\"nav\">"; //закрываем все открытые теги
-   
+  
    // создаем массив для списка меню (название страницы, ссылки на них)
-       $menu=[
+      $menu=[
         ['title'=>'Главная', 'link'=>'/'],
-        ['title'=>'Женская одежда', 'link'=>'womanClothes.php?page=womanClothes', 
+        ['title'=>'Женская одежда', 'link'=>'?page=womanClothes', 
             'children'=>[
-                ['title'=>'Кроссовки', 'link'=>'womanSneakers.php?page=womanSneakers'],
-                ['title'=>'Свитшоты', 'link'=>'womanBlouse.php?page=womanBlouse'],
-                ['title'=>'Штаны', 'link'=>'womanPants.php?page=womanPants'],
+                ['title'=>'Кроссовки', 'link'=>'?page=womanSneakers'],
+                ['title'=>'Свитшоты', 'link'=>'?page=womanBlouse'],
+                ['title'=>'Штаны', 'link'=>'?page=womanPants'],
             ]
             ],
-        ['title'=>'Мужская одежда', 'link'=>'manClothes.php?page=manClothes',  
+        ['title'=>'Мужская одежда', 'link'=>'?page=menClothes',  
             'children'=>[
-                ['title'=>'Кроссовки', 'link'=>'manSneakers.php?page=manSneakers'],
-                ['title'=>'Свитшоты', 'link'=>'manBlouse.php?page=manBlouse'],
-                ['title'=>'Штаны', 'link'=>'manPants.php?page=manPants'],
+                ['title'=>'Кроссовки', 'link'=>'?page=menSneakers'],
+                ['title'=>'Свитшоты', 'link'=>'?page=menBlouse'],
+                ['title'=>'Штаны', 'link'=>'?page=menPants'],
             ]
             ],
-        ['title'=>'Детская одежда', 'link'=>'kidsClothes.php?page=kidsClothes',
+        ['title'=>'Детская одежда', 'link'=>'?page=kidsClothes',
             'children'=>[
-                ['title'=>'Кроссовки', 'link'=>'kidsSneakers.php?page=kidsSneakers'],
-                ['title'=>'Свитшоты', 'link'=>'kidsBlouse.php?page=kidsBlouse'],
-                ['title'=>'Штаны', 'link'=>'kidsPants.php?page=kidsPants'],
+                ['title'=>'Кроссовки', 'link'=>'?page=kidsSneakers'],
+                ['title'=>'Свитшоты', 'link'=>'?page=kidsBlouse'],
+                ['title'=>'Штаны', 'link'=>'?page=kidsPants'],
             ]
             ],
-       ['title'=>'Полезная информация', 'link'=>'usefulInfo.php?page=usefulInfo'],
-        ['title'=>'Контакты', 'link'=>'contacts.php?page=contacts'],
-        ['title'=>'Войти', 'link'=>'enter.php?page=enter']
+       ['title'=>'Полезная информация', 'link'=>'?page=usefulInfo'],
+        ['title'=>'Контакты', 'link'=>'?page=contacts'],
+        ['title'=>'Войти', 'link'=>'?page=enter']
     ];
    
-       
-       
+      
+   
+
    $classes=[0=>'menu', 'submenu']; // глобальный массив уровней меню
     function printMenu($menu, $level){ // функция вывода страниц
     global $classes;
@@ -86,6 +91,4 @@ $namePages = [
     
     echo "</nav>\n</div>\n</div>";
    
-  
 ?>
-              
