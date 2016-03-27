@@ -1,11 +1,23 @@
 <?php
+
+include ('config.php');
+ini_set('display_errors',1);
+error_reporting(E_ALL);
 header("Content-Type:text/html; charset=utf8");
+
 function registration(){
+    connect();
+    mysqli_set_charset($connection, 'utf8');
+    mysqli_select_db($connection, $db_name);
     
-    $regName = "/^[\w \.]{3,}$/ui";
+    if (mysqli_connect_errno($mysqli)) {
+        echo "Не удалось подключиться к MySQL: " . mysqli_connect_error();
+        }
+    
+    $regName = "/^[\w]{3,}\s[\w]{1}\.[а-я]{1}\.$/ui";
     $regLogin = "/^[\w\d_]{3,}$/i";
     $regPass = "/^[\w\d_\-]{3,}$/i";
-    $regMail = "/(\w+@[a-z_]+?\.[a-z]{2,6})/i";
+    $regMail = "/^[\d\w]{1,}\@[\w]{3,6}\.[\w]{2}$/i";
     $regCountry = "/^[\w]{3,}[- \w]{3,}$/iu";
     $regPhone = "/^[0|+380]{1,4}[\d]{2}-?[\d]{3}-?[\d]{2}-?[\d]{2}/";
     
@@ -29,7 +41,9 @@ function registration(){
     } elseif (!preg_match($regPhone, $phone)){
         echo 'Вы ввели не верный формат номера телефона. Повторите ввод.';
     } else {
-        echo 'Поздравялем бл*ть! Вы зарегестрировались';
+        mysqli_query($connection, "INSERT INTO `asdat_stud3`.`users` ("
+                . "`id`, `login`, `username`, `password`, `state`, `country`, `phone`)"
+                . "VALUES(NULL,`".$login."`,`".$FIO."`,`".md5($pass)."`,0,`".$country."`,`".$phone."`)");
     }
     
     /*connect();
